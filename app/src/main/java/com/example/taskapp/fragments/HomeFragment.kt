@@ -77,7 +77,7 @@ class HomeFragment : Fragment(R.layout.fragment_home),SearchView.OnQueryTextList
     }
 
     private fun searchTask(query: String?){
-        val SearchQuery ="%$query"
+        val SearchQuery ="%$query%"
 
         taskViewModel.searchTask(SearchQuery).observe(this){list->
             taskAdapter.differ.submitList(list)
